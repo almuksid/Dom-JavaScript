@@ -1,6 +1,6 @@
 # JavaScript Dom
 
-## avaScript DOM Basic Reference
+## JavaScript DOM Basic Reference
 
 | Term / Keyword       | Type     | Description |
 |-----------------------|----------|--------------|
