@@ -1,8 +1,14 @@
 # JavaScript Dom
 
-**document** - object
-**getElementById** - method
-**window** obj - refer this keyword
+## avaScript DOM Basic Reference
+
+| Term / Keyword       | Type     | Description |
+|-----------------------|----------|--------------|
+| **document**          | Object   | Represents the whole HTML document; allows access to all elements inside it. |
+| **getElementById()**  | Method   | Used to find and access an element by its unique `id`. |
+| **window**            | Object   | The global object representing the browser window. |
+| **this**              | Keyword  | Refers to the current object in context (e.g., inside `window`, `this` → `window`). |
+
 
 ---
 
