@@ -32,6 +32,7 @@ if(age >= 18){
 }
 ```
 ---
+---
 
 ## 2. Asynchronous Example: setTimeout()
 
@@ -43,7 +44,7 @@ setTimeout(function(){
 console.log('Insha Allah Islamik Khalafat');
 ```
 ---
-
+---
 
 # 3.I. DOM Selection Methods Overview Before es6
 
@@ -87,6 +88,32 @@ for(let el of items){
     el.style.color = "green";
 }
 console.log(items);
+```
+---
+---
+ 
+
+# 4. After es6, two new methods were introduced that are more versatile and easier to use:
+### NodeList
+**element, text node, comment node**
+### single - querySelector
+### multiple - querySelectorAll - node list - array like object - can use forEach loop directly
+
+## QuerySelector
+```js
+let titles = document.querySelector('h1:nth-child(2)');
+titles.style.color ='black';
+```
+---
+
+## QuerySelectorAll
+```js
+let items = document.querySelectorAll('li');
+items[0].style.color = 'Green'; 
+items.forEach((el) => {
+    el.style.color = 'green';
+})
+console.log(items); 
 ```
 ---
 ---
