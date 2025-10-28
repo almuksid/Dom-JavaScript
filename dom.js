@@ -134,4 +134,21 @@ navItemsa.forEach(el =>{
 
 // Body style
 
+const titleContainer = document.querySelector('.titleContainer');
+titleContainer.style.width = '80%';
+titleContainer.style.margin = '0 auto';
+titleContainer.style.textAlign = 'center';
 
+const titleCon = document.querySelectorAll('.titleContent');
+const colBtn = document.querySelectorAll('.colorBtn');
+
+colBtn[0].addEventListener('click', function(){
+    titleCon.forEach(el =>{
+        el.style.color = '#760000';
+    })
+})
+colBtn[1].addEventListener('click', function(){
+    titleCon.forEach(el =>{
+        el.style.color = 'green';
+    })
+})
