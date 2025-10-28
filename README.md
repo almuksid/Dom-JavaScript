@@ -116,4 +116,34 @@ items.forEach((el) => {
 console.log(items); 
 ```
 ---
----
+--- 
+
+# 5. Navigation Items Styling & Hover Effect
+```js
+const navItemsa = document.querySelectorAll('.navItems li a');
+navItemsa.forEach(el =>{
+    el.style.color = 'white';
+    el.style.textDecoration = "none";
+    el.style.float = "left";
+    el.style.fontSize = '18px';
+    el.style.paddingRight = '20px';
+
+});
+
+navItemsa.forEach(el =>{
+    el.addEventListener('mouseover', () => {
+        el.style.color = 'white';
+        el.style.textDecoration = "underline";
+        el.style.float = "left";
+        el.style.fontSize = '18px';
+        el.style.paddingRight = '20px';
+    })
+    el.addEventListener('mouseout', () => {
+        el.style.color = 'white';
+        el.style.textDecoration = 'none';
+        el.style.float = "left";
+        el.style.fontSize = '18px';
+        el.style.paddingRight = '20px';
+    })
+});
+```
