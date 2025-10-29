@@ -150,6 +150,7 @@ navItemsa.forEach(el =>{
 ---
 
 ### Add Event Listener
+
 ```js
 colBtn[1].addEventListener('click', function(){
     titleCon.forEach(el =>{
