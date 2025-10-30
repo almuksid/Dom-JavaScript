@@ -143,8 +143,10 @@ navItemsa.forEach(el =>{
 ```
 ## JavaScript Color Changer
 
-### addEventListener: First Method
+
 ```js
+// addEventListener: First Method
+
 const colBtn = document.querySelectorAll('.colorBtn');
 
 colBtn[0].addEventListener('click', function(){
@@ -157,12 +159,9 @@ colBtn[1].addEventListener('click', function(){
         el.style.color = 'green';
     })
 })
-```
 
----
-### addEventListener: Another Method
+// addEventListener: Another Method
 
-```js
 colBtn.forEach((el, ind) =>{
     el.addEventListener('click', function(){
         titleCon.forEach(el =>{
