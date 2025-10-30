@@ -141,7 +141,7 @@ navItemsa.forEach(el =>{
 });
 
 ```
-## JavaScript Color Changer
+# 6. addEventListener: JavaScript Color Changer
 
 
 ```js
