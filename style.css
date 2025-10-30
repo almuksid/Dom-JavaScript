@@ -3,3 +3,6 @@ body{padding: 0; margin:0}
 /* .container h1{padding-top:80px} */
 
 .navItems a{text-decoration: none;} 
+
+
+.conTest ul li a{text-decoration: none;}

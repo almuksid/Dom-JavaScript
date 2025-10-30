@@ -132,29 +132,44 @@ navItemsa.forEach(el =>{
 
 navItemsa.forEach(el =>{
     el.addEventListener('mouseover', () => {
-        el.style.color = 'white';
         el.style.textDecoration = "underline";
-        el.style.float = "left";
-        el.style.fontSize = '18px';
-        el.style.paddingRight = '20px';
     })
     el.addEventListener('mouseout', () => {
-        el.style.color = 'white';
-        el.style.textDecoration = 'none';
-        el.style.float = "left";
-        el.style.fontSize = '18px';
-        el.style.paddingRight = '20px';
+        el.style.removeProperty('text-decoration');
+
     })
 });
+
 ```
----
+## JavaScript Color Changer
 
-### Add Event Listener
-
+### addEventListener: First Method
 ```js
+const colBtn = document.querySelectorAll('.colorBtn');
+
+colBtn[0].addEventListener('click', function(){
+    titleCon.forEach(el =>{
+        el.style.color = '#760000';
+    })
+})
 colBtn[1].addEventListener('click', function(){
     titleCon.forEach(el =>{
         el.style.color = 'green';
+    })
+})
+```
+
+---
+### addEventListener: Another Method
+
+```js
+colBtn.forEach((el, ind) =>{
+    el.addEventListener('click', function(){
+        titleCon.forEach(el =>{
+            if(ind === 0) el.style.color = '#760000';
+            else if(ind === 1) el.style.color = 'green';
+            else if(ind === 2) el.style.color = 'blue';
+        })
     })
 })
 ```

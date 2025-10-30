@@ -127,6 +127,8 @@ navItemsa.forEach(el =>{
 
 // Body style
 
+
+// JavaScript Color Changer
 const titleContainer = document.querySelector('.titleContainer');
 titleContainer.style.width = '80%';
 titleContainer.style.margin = '0 auto';
@@ -135,13 +137,23 @@ titleContainer.style.textAlign = 'center';
 const titleCon = document.querySelectorAll('.titleContent');
 const colBtn = document.querySelectorAll('.colorBtn');
 
-colBtn[0].addEventListener('click', function(){
-    titleCon.forEach(el =>{
-        el.style.color = '#760000';
+
+colBtn.forEach((el, ind) =>{
+    el.addEventListener('click', function(){
+        titleCon.forEach(el =>{
+            if(ind === 0) el.style.color = '#760000';
+            else if(ind === 1) el.style.color = 'green';
+            else if(ind === 2) el.style.color = 'blue';
+        })
     })
 })
-colBtn[1].addEventListener('click', function(){
-    titleCon.forEach(el =>{
-        el.style.color = 'green';
-    })
-})
+// colBtn[0].addEventListener('click', function(){
+//     titleCon.forEach(el =>{
+//         el.style.color = '#760000';
+//     })
+// })
+// colBtn[1].addEventListener('click', function(){
+//     titleCon.forEach(el =>{
+//         el.style.color = 'green';
+//     })
+// })
