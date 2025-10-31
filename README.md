@@ -1,5 +1,8 @@
 # JavaScript Dom
-
+### Want to know
+```js
+// Common addEventListener() Event Types
+```
 ## JavaScript DOM Basic Reference
 
 | Term / Keyword       | Type     | Description |

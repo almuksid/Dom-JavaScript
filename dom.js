@@ -17,6 +17,10 @@ console.log('DOM selection methods');
 // mainCon.style.width = '80%'; mainCon.style.margin = '0 auto';
 // mainCon.style.border = '2px solid black'; mainCon.style.padding = '10px';
 
+const bdy = document.querySelector('body');
+bdy.style.margin = '0';
+bdy.style.fontFamily = 'Arial, sans-serif';
+bdy.style.color = '#0b0028ff';
 
 const navTop = document.querySelector('.navTop');
 navTop.style.backgroundColor = '#2f2f2fff';
@@ -143,7 +147,7 @@ colBtn.forEach((el, ind) =>{
         titleCon.forEach(el =>{
             if(ind === 0) el.style.color = '#760000';
             else if(ind === 1) el.style.color = 'green';
-            else if(ind === 2) el.style.color = 'blue';
+            else if(ind === 2) el.style.color = '#000053';
         })
     })
 })
@@ -157,3 +161,12 @@ colBtn.forEach((el, ind) =>{
 //         el.style.color = 'green';
 //     })
 // })
+
+const title = document.querySelector('#title');
+
+// title.textContent = 'React js'; -> Everything as text
+// title.innerText = 'django'; -> Visible text only
+// title.innerHTML =  'Featured  Products'; -> Can add html tags
+
+console.log(title.innerText);
+title.innerHTML = 'Hi this is <b> Al Muksid </b>.';
