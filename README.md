@@ -176,3 +176,10 @@ colBtn.forEach((el, ind) =>{
 })
 ```
 ---
+---
+# 7. Difference Between textContent, innerText, and innerHTML
+| Property       | Description              | Notes |
+|----------------|--------------------------|--------|
+| `textContent`  | Everything as text       | Includes hidden text and ignores HTML tags |
+| `innerText`    | Visible text only        | Ignores hidden text and respects CSS styles |
+| `innerHTML`    | Can add or get HTML code | Reads and writes HTML elements |
