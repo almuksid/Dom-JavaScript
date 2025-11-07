@@ -192,3 +192,17 @@ btn.addEventListener('click', function(){
 
 
 // console.log(title.classList);
+
+// // section4-----------------------------
+
+// const imgC = document.querySelector('#imageLst');
+// const imageBtn = document.querySelector('#imageBtn');
+
+// // imgC.setAttribute
+// function changeImg() {
+//     imgC.setAttribute('src', 'https://media.newindianexpress.com/newindianexpress%2F2025-03-06%2Fiqckg3wi%2FMushfiqur-Rahim.jpg?w=1024&auto=format%2Ccompress&fit=max');
+// }
+// imageBtn.addEventListener('click', changeImg);
+// // imageBtn.addEventListener('click', () => {
+// //     imageLst.setAttribute('src', 'https://media.newindianexpress.com/newindianexpress%2F2025-03-06%2Fiqckg3wi%2FMushfiqur-Rahim.jpg?w=1024&auto=format%2Ccompress&fit=max')
+// // })
