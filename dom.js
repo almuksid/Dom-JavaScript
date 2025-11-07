@@ -163,10 +163,32 @@ colBtn.forEach((el, ind) =>{
 // })
 
 const title = document.querySelector('#title');
-
+const btn = document.querySelector('#btn');
 // title.textContent = 'React js'; -> Everything as text
 // title.innerText = 'django'; -> Visible text only
 // title.innerHTML =  'Featured  Products'; -> Can add html tags
 
-console.log(title.innerText);
+// console.log(title.innerText);
 title.innerHTML = 'Hi this is <b> Al Muksid </b>.';
+
+// Method to work with attributes.
+// getAttribute
+// setAttribute
+// hasAttribute
+// removeAttribute
+
+// console.log(title.getAttribute('id')); // id
+// title.setAttribute('class', 'col_cls'); // add class attribute
+
+// objective: add class "text-decoration" to the title using setAttribute method
+// title.setAttribute('class', 'text-decoration');
+
+title.classList.add('col_cls', );
+title.classList.remove('col_cls');
+
+btn.addEventListener('click', function(){
+    title.classList.toggle('col_cls');
+})
+
+
+// console.log(title.classList);

@@ -7,3 +7,27 @@ body{padding: 0; margin:0}
 
 .conTest ul li a{text-decoration: none;}
 span{display: none;}
+
+.col_cls{margin: 20px 0; text-align: center; background-color: red; color: rgb(255, 255, 255);}
+
+.text-decoration{text-decoration: underline;}
+
+.box {
+    width: 250px;
+    height: 200px;
+    background-color: lightblue;
+    border: 2px solid #333;
+    text-align: center;
+    line-height: 200px;
+    font-size: 18px;
+    margin: 50px auto;
+    user-select: none;
+    transition: 0.5s;
+  }
+  #inputBox {
+    display: block;
+    margin: 50px auto;
+    padding: 10px;
+    font-size: 18px;
+    width: 300px;
+  }

@@ -150,6 +150,7 @@ navItemsa.forEach(el =>{
 ```js
 // addEventListener: First Method
 
+const titleCon = document.querySelectorAll('.titleContent');
 const colBtn = document.querySelectorAll('.colorBtn');
 
 colBtn[0].addEventListener('click', function(){
@@ -183,3 +184,11 @@ colBtn.forEach((el, ind) =>{
 | `textContent`  | Everything as text       | Includes hidden text and ignores HTML tags |
 | `innerText`    | Visible text only        | Ignores hidden text and respects CSS styles |
 | `innerHTML`    | Can add or get HTML code | Reads and writes HTML elements |
+
+# 8. // Method to work with attributes
+|Method|
+|----------------|--------------------------|--------|
+|getAttribute|
+|setAttribute|
+|hasAttribute|
+|removeAttribute|
