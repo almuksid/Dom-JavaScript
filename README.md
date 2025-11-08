@@ -239,6 +239,55 @@ document.addEventListener('keyup', (event) =>{
 });
 ```
 ---
+## 🖊️ Form / Input Events
+
+```js
+const myForm = document.querySelector('#myForm')
+const user = document.querySelector('#userName');
+const email = document.querySelector('#emailAdd');
+const focusInput= document.querySelector('#focusText')
+const blurTest= document.querySelector('#blurTest')
+const display = document.querySelector('#display');
+
+user.addEventListener('input', () => {
+    display.textContent = `Name: ${user.value}`;
+    console.log(user.value);
+});
+
+email.addEventListener('change', () => {
+    display.textContent = `Email: ${email.value}`;
+    console.log(email.value);
+});
+
+focusInput.addEventListener('focus', () =>{
+    display.style.backgroundColor = 'lightyellow';
+    display.textContent = `Focus Text: ${focusInput.value}`;
+    console.log(focusInput.value);
+});
+
+blurTest.addEventListener('blur', () => {
+    display.style.backgroundColor = 'white';
+    display.textContent = 'Input lost focus!';
+    console.log('Input lost focus!');
+});
+
+myForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const name = myForm.userName.value;
+    const emailAdd = myForm.emailAdd.value;
+    const focusText = myForm.focusText.value;
+    const blurTest = myForm.blurTest.value;
+    display.textContent = `Form Submited \n name: ${name}, email: ${emailAdd}, focus: ${focusText}, Blur: ${blurTest} `;
+    console.log('Form Submited');
+});
+
+myForm.addEventListener('reset', (event) => {
+    display.textContent = 'Form Reset';
+    console.log('Form Reset');
+})
+```
+
+---
 
 ### Example
 ```js
