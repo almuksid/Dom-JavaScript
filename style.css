@@ -31,3 +31,15 @@ span{display: none;}
     font-size: 18px;
     width: 300px;
   }
+
+  /* Section 4 */
+
+.keyboardEventTitle {
+    color: #333;
+    transition: color 0.3s ease;
+  }
+#keyboardEvent {
+  color: crimson;
+  font-size: 24px;
+  margin-top: 10px;
+}

@@ -146,6 +146,11 @@ navItemsa.forEach(el =>{
 ```
 # 6. addEventListener: JavaScript Color Changer
 
+🧠 Shortcut Memory Trick
+
+🔸 “Click = Element”
+🔸 “Keyboard = Document”
+
 ## 🖱️ Mouse Events
 ```js
 const box = document.querySelector('.box');
@@ -209,6 +214,28 @@ box.addEventListener('contextmenu', function(){
     box.textContent = 'contextmenu';
     console.log('contextmenu');
     box.style.color = '#ffffffff';
+});
+```
+---
+
+## ⌨️ Keyboard Events
+
+```js
+const keyboardEvent = document.querySelector('#keyboardEvent');
+
+document.addEventListener('keydown', (event) =>{
+    keyboardEvent.textContent = `Key Down: ${event.key}`
+    keyboardEvent.style.color = 'orange';
+});
+
+document.addEventListener('keypress', (event) =>{
+    keyboardEvent.textContent = `Key Press: ${event.key} `
+    keyboardEvent.style.color = 'green'
+});
+
+document.addEventListener('keyup', (event) =>{
+    keyboardEvent.textContent = `Key Up ${event.key}`
+    keyboardEvent.style.color = 'crimson';
 });
 ```
 ---
