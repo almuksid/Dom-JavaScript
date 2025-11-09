@@ -341,7 +341,7 @@ window.addEventListener('beforeunload', (event) =>{
       output.appendChild(div);
     }
 
-    // 1️⃣ load event
+    // 1 load event
     window.addEventListener('load', function(){
       showEvent('load event - Page fully loaded with all resources.');
     });

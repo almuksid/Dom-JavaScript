@@ -180,7 +180,8 @@ function showEvent(text) {
     output.appendChild(div);
 }
 
-// 1️⃣ load event
+// 2nd method📱 Window / Document Events
+
 window.addEventListener('load', function(){
     showEvent('load event - Page fully loaded with all resources.');
 });
