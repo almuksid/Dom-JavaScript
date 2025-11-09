@@ -151,7 +151,7 @@ navItemsa.forEach(el =>{
 🔸 “Click = Element”
 🔸 “Keyboard = Document”
 
-## a.🖱️ Mouse Events
+## A.🖱️ Mouse Events 
 
 ```js
 const box = document.querySelector('.box');
@@ -219,7 +219,7 @@ box.addEventListener('contextmenu', function(){
 ```
 ---
 
-## b.⌨️ Keyboard Events
+## B.⌨️ Keyboard Events
 
 ```js
 const keyboardEvent = document.querySelector('#keyboardEvent');
@@ -241,7 +241,7 @@ document.addEventListener('keyup', (event) =>{
 ```
 ---
 
-## c.🖊️ Form / Input Events
+## C.🖊️ Form / Input Events
 
 ```js
 const myForm = document.querySelector('#myForm')
@@ -290,7 +290,7 @@ myForm.addEventListener('reset', (event) => {
 ```
 ---
 
-## d.📱 Window / Document Events
+## D.📱 Window / Document Events
 
 ```js
 window.addEventListener('load', function(){
@@ -324,7 +324,7 @@ window.addEventListener('beforeunload', (event) =>{
 });
 ```
 ---
-## d.1. 2nd method📱 Window / Document Events
+## D.1. 2nd method📱 Window / Document Events
 
 ```js
     // HTML
@@ -347,6 +347,39 @@ window.addEventListener('beforeunload', (event) =>{
     });
 ```
 ---
+## E. 🧩 Clipboard Events
+
+| Direction | Method      | Meaning                                | Typical Event |
+|-----------|------------|----------------------------------------|---------------|
+| → Clipboard | `setData()` | Send data **into** the clipboard       | `copy` / `cut` |
+| ← Clipboard | `getData()` | Take data **from** the clipboard       | `paste`        |
+
+```js
+const clipboardText = document.querySelector('#clipText');
+
+// Use case: You can modify clipboard content using event.clipboardData.setData().
+clipboardText.addEventListener('copy',(event) =>{
+    event.preventDefault();
+    event.clipboardData.setData('text/plain', 'You have no permition to copy this text');
+    alert('You have not good working to copy this text');
+    console.log('Copy this text');
+});
+
+clipboardText.addEventListener('cut', (event)=>{
+    // event.preventDefault(); // When use preventDefault it can't cut your text.
+    // console.log("You can't cut this text");
+    console.log("Cut this text");
+});
+
+clipboardText.addEventListener('paste', event =>{
+    event.preventDefault()
+    let pastData = event.clipboardData.getData('text').toUpperCase();
+    clipboardText.value += pastData;
+    alert('you paste: ' + pastData);
+})
+```
+---
+
 
 ### Example
 ```js

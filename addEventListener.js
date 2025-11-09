@@ -188,3 +188,36 @@ window.addEventListener('load', function(){
 
 // ----------------------------------------------
 
+// 🧩 Clipboard Events
+
+const clipboardText = document.querySelector('#clipText');
+
+// Use case: You can modify clipboard content using event.clipboardData.setData().
+clipboardText.addEventListener('copy',(event) =>{
+    event.preventDefault();
+    event.clipboardData.setData('text/plain', 'You have no permition to copy this text');
+    alert('You have not good working to copy this text');
+    console.log('Copy this text');
+});
+
+clipboardText.addEventListener('cut', (event)=>{
+    // event.preventDefault(); // When use preventDefault it can't cut your text.
+    // console.log("You can't cut this text");
+    console.log("Cut this text");
+});
+
+clipboardText.addEventListener('paste', event =>{
+    event.preventDefault()
+    let pastData = event.clipboardData.getData('text').toUpperCase();
+    clipboardText.value += pastData;
+    alert('you paste: ' + pastData);
+})
+// ----------------------------------------------
+
+
+
+
+
+
+
+
