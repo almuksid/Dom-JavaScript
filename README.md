@@ -324,6 +324,29 @@ window.addEventListener('beforeunload', (event) =>{
 });
 ```
 ---
+## d.1. 2nd method📱 Window / Document Events
+
+```js
+    // HTML
+  <h1>Window / Document Events Demo</h1>
+  <div id="output"></div>
+
+    // script
+    const output = document.getElementById('output');
+
+    function showEvent(text) {
+      const div = document.createElement('div');
+      div.className = 'event';
+      div.textContent = text;
+      output.appendChild(div);
+    }
+
+    // 1️⃣ load event
+    window.addEventListener('load', function(){
+      showEvent('load event - Page fully loaded with all resources.');
+    });
+```
+---
 
 ### Example
 ```js
@@ -371,3 +394,5 @@ colBtn.forEach((el, ind) =>{
 |setAttribute|
 |hasAttribute|
 |removeAttribute|
+
+
