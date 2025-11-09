@@ -66,13 +66,20 @@
         <!-- Form / Input Events -->
         <form id="myForm" class="section5" style="height: 200px;">
             <h2>Type Your Name</h2>
-            <input type="text" value="" id="userName" placeholder="Enter your Name: ">
-            <input type="text" name="" id="emailAdd" placeholder="Enter your Email: ">
-            <input type="text" name="" id="focusText" placeholder="Click Here">
-            <input type="text" id="blurTest" placeholder="Click and then click outside">
+
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" placeholder="Enter your Name"><br>
+
+            <label for="emailAdd">Email:</label>
+            <input type="text" id="emailAdd" name="emailAdd" placeholder="Enter your Email"><br>
+
+            <label for="focusText">Focus:</label>
+            <input type="text" id="focusText" name="focusText" placeholder="Click Here"><br>
+
+            <label for="blurTest">Blur:</label>
+            <input type="text" id="blurTest" name="blurTest" placeholder="Click and then click outside"><br>
 
             <button type="submit">Submit</button>
-
             <button type="reset">Reset</button>
 
             <p id="display"></p>
