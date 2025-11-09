@@ -135,3 +135,39 @@ myForm.addEventListener('reset', (event) => {
 // ----------------------------------------------
 
 
+// 📱 Window / Document Events
+
+// const display = document.querySelector('#display');
+
+window.addEventListener('load', function(){
+    display.textContent = "Page Loaded";
+    console.log('Page loaded');
+});
+
+window.addEventListener('resize', function(){
+    display.textContent = 'Window Size changed';
+    console.log('Window Size changed');
+});
+
+window.addEventListener('scroll', function(){
+    display.textContent = 'Page Scrolled';
+    console.log('Page Scrolled');
+});
+
+window.addEventListener('unload', function(){
+    display.textContent = "Page Unloaded";
+    console.log('Page Unloaded');
+});
+
+window.addEventListener('DOMContentLoaded', function(){
+    display.textContent = 'Dom Content Loaded';
+    console.log('Dom Console Loaded');
+});
+
+window.addEventListener('beforeunload', (event) =>{
+    event.preventDefault();
+    event.returnValue = '';
+})
+
+// ----------------------------------------------
+

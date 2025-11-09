@@ -151,7 +151,8 @@ navItemsa.forEach(el =>{
 🔸 “Click = Element”
 🔸 “Keyboard = Document”
 
-## 🖱️ Mouse Events
+## a.🖱️ Mouse Events
+
 ```js
 const box = document.querySelector('.box');
 
@@ -218,7 +219,7 @@ box.addEventListener('contextmenu', function(){
 ```
 ---
 
-## ⌨️ Keyboard Events
+## b.⌨️ Keyboard Events
 
 ```js
 const keyboardEvent = document.querySelector('#keyboardEvent');
@@ -239,7 +240,8 @@ document.addEventListener('keyup', (event) =>{
 });
 ```
 ---
-## 🖊️ Form / Input Events
+
+## c.🖊️ Form / Input Events
 
 ```js
 const myForm = document.querySelector('#myForm')
@@ -286,7 +288,41 @@ myForm.addEventListener('reset', (event) => {
     console.log('Form Reset');
 })
 ```
+---
 
+## d.📱 Window / Document Events
+
+```js
+window.addEventListener('load', function(){
+    display.textContent = "Page Loaded";
+    console.log('Page loaded');
+});
+
+window.addEventListener('resize', function(){
+    display.textContent = 'Window Size changed';
+    console.log('Window Size changed');
+});
+
+window.addEventListener('scroll', function(){
+    display.textContent = 'Page Scrolled';
+    console.log('Page Scrolled');
+});
+
+window.addEventListener('unload', function(){
+    display.textContent = "Page Unloaded";
+    console.log('Page Unloaded');
+});
+
+window.addEventListener('DOMContentLoaded', function(){
+    display.textContent = 'Dom Content Loaded';
+    console.log('Dom Console Loaded');
+});
+
+window.addEventListener('beforeunload', (event) =>{
+    event.preventDefault();
+    event.returnValue = '';
+});
+```
 ---
 
 ### Example
