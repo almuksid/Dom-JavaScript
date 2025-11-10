@@ -144,6 +144,9 @@ navItemsa.forEach(el =>{
 });
 
 ```
+---
+---
+
 # 6. addEventListener: JavaScript Color Changer
 
 🧠 Shortcut Memory Trick
@@ -152,6 +155,8 @@ navItemsa.forEach(el =>{
 🔸 “Keyboard = Document”
 
 ## A.🖱️ Mouse Events 
+
+**click**, **dblclick**, **mousedown**, **mouseup**, **mousemove**, **mouseenter**, **mouseleave**, **mouseover**, **mouseout**, **contextmenu**
 
 ```js
 const box = document.querySelector('.box');
@@ -221,6 +226,8 @@ box.addEventListener('contextmenu', function(){
 
 ## B.⌨️ Keyboard Events
 
+**keydown**, **keypress**, **keyup**
+
 ```js
 const keyboardEvent = document.querySelector('#keyboardEvent');
 
@@ -242,6 +249,8 @@ document.addEventListener('keyup', (event) =>{
 ---
 
 ## C.🖊️ Form / Input Events
+
+**input**, **change**, **focus**, **blur**, **submit**, **reset**
 
 ```js
 const myForm = document.querySelector('#myForm')
@@ -291,6 +300,8 @@ myForm.addEventListener('reset', (event) => {
 ---
 
 ## D.📱 Window / Document Events
+
+**load**, **resize**, **scroll**, **unload**, **DOMContentLoaded**
 
 ```js
 window.addEventListener('load', function(){
@@ -349,6 +360,9 @@ window.addEventListener('beforeunload', (event) =>{
 ---
 ## E. 🧩 Clipboard Events
 
+**copy**, **cut**, **paste**
+
+
 | Direction | Method      | Meaning                                | Typical Event |
 |-----------|------------|----------------------------------------|---------------|
 | → Clipboard | `setData()` | Send data **into** the clipboard       | `copy` / `cut` |
@@ -380,6 +394,8 @@ clipboardText.addEventListener('paste', event =>{
 ```
 ---
 ## F. 🧭 Drag & Drop Events
+
+**drag**, **dragstart**, **dragend**, **dragenter**, **dragover**, **dragleave**, **drop**
 
 ```js
 // cursor: grab; ***
@@ -419,6 +435,7 @@ dropZone.addEventListener('drop', () => {
     console.log('Drop Done');
 });
 ```
+---
 
 ### Example
 ```js
