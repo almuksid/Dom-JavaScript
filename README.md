@@ -379,7 +379,7 @@ clipboardText.addEventListener('paste', event =>{
 })
 ```
 ---
-## 🧭 Drag & Drop Events
+## F. 🧭 Drag & Drop Events
 
 ```js
 // cursor: grab; ***
