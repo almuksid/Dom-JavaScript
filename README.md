@@ -379,7 +379,46 @@ clipboardText.addEventListener('paste', event =>{
 })
 ```
 ---
+## 🧭 Drag & Drop Events
 
+```js
+// cursor: grab; ***
+const dragItem = document.querySelector('#dragItem');
+const dropZone = document.querySelector('#dropZone');
+
+
+dragItem.addEventListener('dragstart', () => {
+    console.log("Drag start");
+});
+
+dragItem.addEventListener('drag', () => {
+    console.log('Continue to druging')
+});
+
+dragItem.addEventListener('dragend', () => {
+    console.log('Drag End');
+});
+
+dropZone.addEventListener('dragenter', () =>{
+    dropZone.style.backgroundColor = 'orange';
+    dropZone.style.color = 'white';
+    console.log('Entered drop zone');
+})
+
+dropZone.addEventListener('dragover', (event) => {
+    event.preventDefault();
+    dropZone.style.backgroundColor = "green";
+    dropZone.style.color = "white";
+    console.log('Dragging over drop zone');
+});
+
+
+dropZone.addEventListener('drop', () => {
+    dropZone.style.backgroundColor = 'Black';
+    dropZone.style.color = 'white';
+    console.log('Drop Done');
+});
+```
 
 ### Example
 ```js
