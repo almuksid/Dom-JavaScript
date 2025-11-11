@@ -9,142 +9,17 @@
 </head>
 
 <body>
-    <div class="mainContainer">
-        <div class="">
-            <nav>
-                <div class="navTop ">
-                    <div class="navContainer1">
-                        <img src="cosmetics.png" alt="" srcset="">
-                        <form action="">
-                            <input type="search" name="" id="">
-                            <button type="submit"> Search </button>
-                        </form>
-                        <button class="navTopBtn" type="submit"><a href=""> login </a></button>
-                    </div>
-                </div>
-                <div class="navItems">
-                    <div class="navContainer2">
-                        <ul class="">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">New Arrivals</a></li>
-                            <li><a href="">Beauty & Care</a></li>
-                            <li><a href="">Fashion & Accessories</a></li>
-                            <li><a href="">Offers & Collections</a></li>
-                            <li><a href="">Inspiration</a></li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="titleContainer">
-            <!-- <div class="titleCon"> -->
-            <h1 class="titleContent"> Welcome to Beauty Store </h1>
-            <p class="titleContent"> Your one stop shop for all things beauty and fashion! </p>
-            <!-- </div> -->
-            <Button class="colorBtn" href="#">Dark Red</Button>
-            <Button class="colorBtn" href="#">Green</Button>
-            <Button class="colorBtn" href="#">Blue</Button>
-
-        </div>
-        <hr />
-        <div class="section2">
-            <h2 id="title" class="text-decoration"> Featured <span> Products </span> </h2>
-            <button id="btn" type="button">Click me to toggle</button>
-        </div>
-        <hr />
-
-        <!-- Add Event Listener  -->
-
-        <!-- Mouse Events -->
-        <div class="box section3">Hover, Click, or Move Here</div>
-
-        <!-- Keyboard Events -->
-        <div class="section4">
-            <h2 class="keyboardEventTitle">Press any key on your keyboard</h2>
-            <p id="keyboardEvent">Waiting for input...</p>
-        </div>
-
-        <!-- Form / Input Events -->
-        <form id="myForm" class="section5" style="height: 200px;">
-            <h2>Type Your Name</h2>
-
-            <label for="userName">Name:</label>
-            <input type="text" id="userName" name="userName" placeholder="Enter your Name"><br>
-
-            <label for="emailAdd">Email:</label>
-            <input type="text" id="emailAdd" name="emailAdd" placeholder="Enter your Email"><br>
-
-            <label for="focusText">Focus:</label>
-            <input type="text" id="focusText" name="focusText" placeholder="Click Here"><br>
-
-            <label for="blurTest">Blur:</label>
-            <input type="text" id="blurTest" name="blurTest" placeholder="Click and then click outside"><br>
-
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-
-            <p id="display"></p>
-        </form>
-
-        <!-- Window / Document Events -->
-        <div class="section4">
-            <p id="display"></p>
-        </div>
-
-        <!-- 2nd method -->
-        <h1>Window / Document Events Demo</h1>
-        <div id="output"></div>
-
-        <!-- Clipboard Events -->
-        <textarea name="" id="clipText">Hi this is Al Muksid</textarea>
-
-        <!-- Drag & Drop Events -->
-        <h2 style="text-align:center;"> Drag & Drop Example </h2>
-        <div class="container">
-            <div id="dragItem" class="box drag-item" draggable="true"> Drag Me </div>
-            <div id="dropZone" class="box"> Drop Here </div>
-        </div>
-
-        <!-- 9. Form Events -->
-        <form id="newForm" action="" method="get">
-            <label for="">Enter your Name: </label>
-            <input type="text" name="text" id="inputa" />
-            <br />
-            <label for="">Enter your email: </label>
-            <input type="email" name="email" id="inputa" />
-            <br />
-            <input type="color" name="color" id="inputa" />
-            <br />
-            <input type="submit" value="Submit" id="inputa" />
-        </form>
-        <h3 id="textForForm"> Your Name </h3>
-        <!-- <input type="text" id="inputBox" placeholder="Type something..." /> -->
-
-        <!-- <div class="section4">
-            <img id="imageLst"
-                src="https://static.cricbuzz.com/a/img/v1/1080x608/i1/c187875/is-litton-das-the-ideal-replacement-for-mushfiqur-rahim-in-the-middle-order.jpg"
-                alt="" />
-             <img id="imageLst"
-                src="https://media.newindianexpress.com/newindianexpress%2F2025-03-06%2Fiqckg3wi%2FMushfiqur-Rahim.jpg?w=1024&auto=format%2Ccompress&fit=max"
-                alt="" />
-            <button id="imageBtn" type="submit">Click Me to change Image</button>
-        </div> -->
-
-        <!-- <div class="slide">
-            <img src="cosmetics.jpg" alt="" srcset="">
-            <img src="hair_oil.jpg" alt="" srcset="">
-            <img src="cosmetics_new.jpg" alt="" srcset="">
-            <img src="perfouum.jpg" alt="" srcset="">
-
-            <button class="prev" type="submit"><</button>
-            <button class="next" type="submit">></button>
-        </div> -->
-
+    <div class="container">
+        <!-- challenge 1 -->
+        <img id="setImage" class="container"
+            src="https://zakirnaik.com/wp-content/themes/zakir/assets/img/content/about/intro_2.jpg" alt="" srcset="" />
+        <br />
+        <h2 id="setName" class="container txt">Enter Your Name</h2>
+        <br />
+        <input id="ChangeButton" class="container" type="submit" value="Change" />
     </div>
-
     <script src="dom.js"></script>
-    <script src="addEventListener.js"></script>
+
 </body>
 
 </html>
