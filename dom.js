@@ -206,3 +206,18 @@ btn.addEventListener('click', function(){
 // // imageBtn.addEventListener('click', () => {
 // //     imageLst.setAttribute('src', 'https://media.newindianexpress.com/newindianexpress%2F2025-03-06%2Fiqckg3wi%2FMushfiqur-Rahim.jpg?w=1024&auto=format%2Ccompress&fit=max')
 // // })
+
+const newForm = document.querySelector('#newForm');
+const input = document.querySelectorAll('#inputa');
+const formText = document.querySelector('#textForForm');
+
+newForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    formText.textContent = input[0].value;
+    let color = input[2].value;
+    formText.style.color = color;
+    // let val = input[0].value;
+    // formText.textContent = val;
+    console.log('Submit form');
+
+});

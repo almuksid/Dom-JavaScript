@@ -485,3 +485,34 @@ colBtn.forEach((el, ind) =>{
 |removeAttribute|
 
 
+# 9. Form Events in JavaScript
+```html
+<form id="newForm" action="" method="get">
+    <label for="">Enter your Name: </label>
+    <input type="text" name="text" id="inputa" />
+    <br />
+    <label for="">Enter your email: </label>
+    <input type="email" name="email" id="inputa" />
+    <br />
+    <input type="color" name="color" id="inputa" />
+    <br />
+    <input type="submit" value="Submit" id="inputa" />
+</form>
+<h3 id="textForForm"> Your Name </h3>
+```
+```js
+const newForm = document.querySelector('#newForm');
+const input = document.querySelectorAll('#inputa');
+const formText = document.querySelector('#textForForm');
+
+newForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    formText.textContent = input[0].value;
+    let color = input[2].value;
+    formText.style.color = color;
+    // let val = input[0].value;
+    // formText.textContent = val;
+    console.log('Submit form');
+
+});
+```
