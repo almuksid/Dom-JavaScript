@@ -158,6 +158,10 @@ navItemsa.forEach(el =>{
 
 **click**, **dblclick**, **mousedown**, **mouseup**, **mousemove**, **mouseenter**, **mouseleave**, **mouseover**, **mouseout**, **contextmenu**
 
+```html
+<div class="box section3">Hover, Click, or Move Here</div>
+```
+
 ```js
 const box = document.querySelector('.box');
 
@@ -227,7 +231,12 @@ box.addEventListener('contextmenu', function(){
 ## B.⌨️ Keyboard Events
 
 **keydown**, **keypress**, **keyup**
-
+```html
+<div class="section4">
+    <h2 class="keyboardEventTitle">Press any key on your keyboard</h2>
+    <p id="keyboardEvent">Waiting for input...</p>
+</div>
+```
 ```js
 const keyboardEvent = document.querySelector('#keyboardEvent');
 
@@ -251,7 +260,28 @@ document.addEventListener('keyup', (event) =>{
 ## C.🖊️ Form / Input Events
 
 **input**, **change**, **focus**, **blur**, **submit**, **reset**
+```html
+<form id="myForm" class="section5" style="height: 200px;">
+    <h2>Type Your Name</h2>
 
+    <label for="userName">Name:</label>
+    <input type="text" id="userName" name="userName" placeholder="Enter your Name"><br>
+
+    <label for="emailAdd">Email:</label>
+    <input type="text" id="emailAdd" name="emailAdd" placeholder="Enter your Email"><br>
+
+    <label for="focusText">Focus:</label>
+    <input type="text" id="focusText" name="focusText" placeholder="Click Here"><br>
+
+    <label for="blurTest">Blur:</label>
+    <input type="text" id="blurTest" name="blurTest" placeholder="Click and then click outside"><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+    <p id="display"></p>
+</form>
+```
 ```js
 const myForm = document.querySelector('#myForm')
 const user = document.querySelector('#userName');
@@ -302,7 +332,11 @@ myForm.addEventListener('reset', (event) => {
 ## D.📱 Window / Document Events
 
 **load**, **resize**, **scroll**, **unload**, **DOMContentLoaded**
-
+```html
+<div class="section4">
+    <p id="display"></p>
+</div>
+```
 ```js
 window.addEventListener('load', function(){
     display.textContent = "Page Loaded";
@@ -336,7 +370,10 @@ window.addEventListener('beforeunload', (event) =>{
 ```
 ---
 ## D.1. 2nd method📱 Window / Document Events
-
+```html
+<h1>Window / Document Events Demo</h1>
+<div id="output"></div>
+```
 ```js
     // HTML
   <h1>Window / Document Events Demo</h1>
@@ -368,6 +405,9 @@ window.addEventListener('beforeunload', (event) =>{
 | → Clipboard | `setData()` | Send data **into** the clipboard       | `copy` / `cut` |
 | ← Clipboard | `getData()` | Take data **from** the clipboard       | `paste`        |
 
+```html
+<textarea name="" id="clipText">Hi this is Al Muksid</textarea>
+```
 ```js
 const clipboardText = document.querySelector('#clipText');
 
@@ -397,6 +437,13 @@ clipboardText.addEventListener('paste', event =>{
 
 **drag**, **dragstart**, **dragend**, **dragenter**, **dragover**, **dragleave**, **drop**
 
+```html
+<h2 style="text-align:center;"> Drag & Drop Example </h2>
+<div class="container">
+    <div id="dragItem" class="box drag-item" draggable="true"> Drag Me </div>
+    <div id="dropZone" class="box"> Drop Here </div>
+</div>
+```
 ```js
 // cursor: grab; ***
 const dragItem = document.querySelector('#dragItem');
@@ -477,12 +524,12 @@ colBtn.forEach((el, ind) =>{
 | `innerHTML`    | Can add or get HTML code | Reads and writes HTML elements |
 
 # 8. // Method to work with attributes
-|Method|
-|----------------|--------------------------|--------|
-|getAttribute|
-|setAttribute|
-|hasAttribute|
-|removeAttribute|
+| Method          | Description |
+|-----------------|-------------|
+| **getAttribute()**  | Gets the value of an attribute. |
+| **setAttribute()**  | Sets a new value for an attribute. |
+| **hasAttribute()**  | Checks if an element has a specific attribute. |
+| **removeAttribute()** | Removes an attribute from an element. |
 
 
 # 9. Form Events in JavaScript
