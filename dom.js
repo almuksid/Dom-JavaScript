@@ -1,22 +1,34 @@
-const images = [
-    { name: "Mountain", url: "https://picsum.photos/id/1018/600/400" },
-    { name: "Beach", url: "https://picsum.photos/id/1015/600/400" },
-    { name: "Forest", url: "https://picsum.photos/id/1020/600/400" },
-    { name: "City", url: "https://picsum.photos/id/1031/600/400" },
-    { name: "Desert", url: "https://picsum.photos/id/1003/600/400" }
-]
+// Challenge 2
+const calculateBtn = document.getElementById('calculateBtn');
+const result = document.getElementById('result');
 
-const setName = document.querySelector('#setName');
-const setImage = document.querySelector('#setImage');
-const changeButton = document.querySelector('#ChangeButton');
+calculateBtn.addEventListener('click', function() {
+  const num1 = parseFloat(document.getElementById('num1').value);
+  const num2 = parseFloat(document.getElementById('num2').value);
+  const operator = document.getElementById('operator').value;
 
-changeButton.addEventListener('click', () =>{
-    const random =Math.floor(Math.random() * images.length);
-    const selectedImage = images[random];
+  let output;
 
-    setImage.src = selectedImage.url;
-    setName.textContent = selectedImage.name;
-    console.log(selectedImage);
-    // setName.textContent = images[1].name;
-    // setImage.src = images[1].url;
+  if (isNaN(num1) || isNaN(num2)) {
+    output = 'Please enter both numbers!';
+  } else {
+    switch (operator) {
+      case 'plus':
+        output = num1 + num2;
+        break;
+      case 'minus':
+        output = num1 - num2;
+        break;
+      case 'multiply':
+        output = num1 * num2;
+        break;
+      case 'divide':
+        output = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+        break;
+      default:
+        output = 'Invalid operator';
+    }
+  }
+
+  result.textContent = output;
 });
