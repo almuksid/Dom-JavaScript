@@ -523,6 +523,8 @@ colBtn.forEach((el, ind) =>{
 | `innerText`    | Visible text only        | Ignores hidden text and respects CSS styles |
 | `innerHTML`    | Can add or get HTML code | Reads and writes HTML elements |
 
+---
+---
 # 8. // Method to work with attributes
 | Method          | Description |
 |-----------------|-------------|
@@ -530,7 +532,8 @@ colBtn.forEach((el, ind) =>{
 | **setAttribute()**  | Sets a new value for an attribute. |
 | **hasAttribute()**  | Checks if an element has a specific attribute. |
 | **removeAttribute()** | Removes an attribute from an element. |
-
+---
+---
 
 # 9. Form Events in JavaScript
 ```html
@@ -563,5 +566,105 @@ newForm.addEventListener('submit', (event) => {
 
 });
 ```
+---
+---
+# 10. Problem Solving 
+## Challenge 1
+```html
+ <!-- challenge 1 -->
+        <img id="setImage" class="container"
+            src="https://zakirnaik.com/wp-content/themes/zakir/assets/img/content/about/intro_2.jpg" alt="" srcset="" />
+        <br />
+        <h2 id="setName" class="container txt">Enter Your Name</h2>
+        <br />
+        <input id="ChangeButton" class="container" type="submit" value="Change" />
 
-# 10
+```
+```js
+const images = [
+    { name: "Mountain", url: "https://picsum.photos/id/1018/600/400" },
+    { name: "Beach", url: "https://picsum.photos/id/1015/600/400" },
+    { name: "Forest", url: "https://picsum.photos/id/1020/600/400" },
+    { name: "City", url: "https://picsum.photos/id/1031/600/400" },
+    { name: "Desert", url: "https://picsum.photos/id/1003/600/400" }
+]
+
+const setName = document.querySelector('#setName');
+const setImage = document.querySelector('#setImage');
+const changeButton = document.querySelector('#ChangeButton');
+
+changeButton.addEventListener('click', () =>{
+    const random =Math.floor(Math.random() * images.length);
+    const selectedImage = images[random];
+
+    setImage.src = selectedImage.url;
+    setName.textContent = selectedImage.name;
+    console.log(selectedImage);
+    // setName.textContent = images[1].name;
+    // setImage.src = images[1].url;
+});
+```
+---
+
+## Challenge 2
+```js
+<form id="calcForm">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" required>
+    <br>
+    <label for="operator">Operator:</label>
+    <select id="operator">
+        <option value="plus">+</option>
+        <option value="minus">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" required>
+    <br>
+    <button type="button" id="calculateBtn">Calculate</button>
+</form>
+
+<h2>Result: <span id="result">0</span></h2>
+<script src="dom.js"></script>
+```
+
+```js
+const calculateBtn = document.getElementById('calculateBtn');
+const result = document.getElementById('result');
+
+calculateBtn.addEventListener('click', function() {
+  const num1 = parseFloat(document.getElementById('num1').value);
+  const num2 = parseFloat(document.getElementById('num2').value);
+  const operator = document.getElementById('operator').value;
+
+  let output;
+
+  if (isNaN(num1) || isNaN(num2)) {
+    output = 'Please enter both numbers!';
+  } else {
+    switch (operator) {
+      case 'plus':
+        output = num1 + num2;
+        break;
+      case 'minus':
+        output = num1 - num2;
+        break;
+      case 'multiply':
+        output = num1 * num2;
+        break;
+      case 'divide':
+        output = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+        break;
+      default:
+        output = 'Invalid operator';
+    }
+  }
+
+  result.textContent = output;
+});
+```
+
+---
+---
