@@ -745,5 +745,85 @@ form.addEventListener('submit', (event) => {
 
 });
 ```
+---
+---
+# 12. Refactor code and add dynamic div with event delegation logic
+```html
+<div class="grandparent div">
+    <div class="parent div">
+        <div class="child div"></div>
+    </div>
+</div>
+```
+```js
+const grandparent = document.querySelector('.grandparent');
+const parent = document.querySelector('.parent');
+const child = document.querySelector('.child');
+
+grandparent.addEventListener('click', () => {
+    console.log('Grandparent');
+});
+
+parent.addEventListener('click', () => {
+    console.log('Parent');
+});
+
+child.addEventListener('click', () => {
+    console.log('child');
+}, {once:true});
+
+grandparent.addEventListener('click', (event) => {
+    event.stopPropagation();
+    console.log('Grandparent');
+}, {capture: true});
+
+parent.addEventListener('click', () => {
+    console.log('Parent');
+}, {capture: true});
+
+child.addEventListener('click', () => {
+    console.log('child');
+}, {capture: true});
+
+let counter = 0;
+function sayRafi(){
+    console.log('Welcome Rafi');
+    counter++
+    if(counter == 3){
+        child.removeEventListener('click', sayRafi)
+    }
+}
+
+child.addEventListener('click', sayRafi);
+
+setTimeout(() => {
+    child.removeEventListener('click', sayRafi);
+}, 3000);
+
+// event delegation
+
+const div = document.querySelectorAll('div');
+
+div.forEach(el => {
+    el.addEventListener('click', (event) => {
+        console.log(event.target);
+        
+    })
+});
+document.body.addEventListener('click', (e) => {
+    if(e.target.matches('div')){
+        console.log('Hello Rafi')
+    }
+});
+
+const newDiv = document.createElement('div');
+newDiv.style.width = '150px';
+newDiv.style.height = '150px';
+newDiv.style.background = 'green';
+newDiv.style.color = 'white';
+document.body.append(newDiv)
+```
+---
+---
 
 
