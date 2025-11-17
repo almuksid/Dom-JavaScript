@@ -1,67 +1,116 @@
-const formTitle = document.createElement('h2');
-const clickBtn = document.querySelector('#clickBtn');
-const clickColor = document.querySelector('#clickColor');
-const formCon = document.querySelector('#formCon');
+// const formCon = document.querySelector('#selectText');
+// const clickBtn = document.querySelector('#selectBtn');
+// const selectColor = document.querySelector('#selectColor');
+// const newText = document.createElement('h2');
 
-clickColor.addEventListener('input', () => {
-    // formCon.style.color = clickColor.value;
-    const color = clickColor.value;
-    formCon.style.color = color;
-})
+// selectColor.addEventListener('input', () => {
+//     formCon.style.color = selectColor.value
+// })
+// // const color = selectColor.value;
+// // formCon.style.color = color;
 
-// formCon.style.color = 'red'
-clickBtn.addEventListener('click', () =>{
-    formTitle.textContent = 'Welcome Bangladesh';
-    // formTitle.classList.add('color');
-    let color = clickColor.value;
-    formTitle.style.color = color;
-})
-document.body.append(formTitle);
+// // newText.textContent = "Hello Rafi"
+// clickBtn.addEventListener('click', () => {
+//     newText.textContent = 'Hello Rafi';
+//     newText.style.color = selectColor.value;
+// })
+// document.body.append(newText);
 
 
-const form = document.querySelector('#evForm');
-const ul = document.querySelector('#evUl');
-const inputev = document.querySelectorAll('#inputEv');
+// const form = document.querySelector('#evForm');
+// const inputE = document.querySelectorAll('#evInput');
+// const ul = document.querySelector('#evUl');
+
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     const li = document.createElement('li');
+//     const checkbox = document.createElement('input');
+//     checkbox.type = 'checkbox';
+//     checkbox.checked = false;
+
+//     checkbox.addEventListener('click', () =>{
+//         if(checkbox.checked){
+//             li.style.color = 'red'
+//         }
+//         else{
+//             li.style.color = 'black'
+//         }
+//     })
+//     // createInput.
+
+//     li.textContent = inputE[0].value;
+//     li.append(checkbox);
+
+//     ul.append(li);
+
+// })
 
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    // create li 
-    const li = document.createElement('li');
+// const grandparent = document.querySelector('.grandparent');
+// const parent = document.querySelector('.parent');
+// const child = document.querySelector('.child');
 
-    // create checkbox
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = false;
+// grandparent.addEventListener('click', () => {
+//     console.log('Grandparent');
+// });
 
-    // add text
-    li.textContent = inputev[0].value;
+// parent.addEventListener('click', () => {
+//     console.log('Parent');
+// });
 
-    checkbox.addEventListener('change', () => {
-        if(checkbox.checked){
-            li.style.textDecoration = 'underline';
-            li.style.color = 'red';
-        }
-        else{
-            li.style.textDecoration = 'none';
-        }
-    });
+// child.addEventListener('click', () => {
+//     console.log('child');
+// }, {once:true});
 
+// grandparent.addEventListener('click', (event) => {
+//     event.stopPropagation();
+//     console.log('Grandparent');
+// }, {capture: true});
 
-    li.append(checkbox);
-    
-    ul.append(li);
+// parent.addEventListener('click', () => {
+//     console.log('Parent');
+// }, {capture: true});
 
-    // const li = document.createElement('li');
-    // li.textContent = inputev[0].value
-    // ul.append(li);
+// child.addEventListener('click', () => {
+//     console.log('child');
+// }, {capture: true});
 
+// let counter = 0;
+// function sayRafi(){
+//     console.log('Welcome Rafi');
+//     counter++
+//     if(counter == 3){
+//         child.removeEventListener('click', sayRafi)
+//     }
+// }
+
+// child.addEventListener('click', sayRafi);
+
+// setTimeout(() => {
+//     child.removeEventListener('click', sayRafi);
+// }, 3000);
+
+// event delegation
+
+const div = document.querySelectorAll('div');
+
+// div.forEach(el => {
+//     el.addEventListener('click', (event) => {
+//         console.log(event.target);
+        
+//     })
+// });
+document.body.addEventListener('click', (e) => {
+    if(e.target.matches('div')){
+        console.log('Hello Rafi')
+    }
 });
 
-
-
-
-
-
+const newDiv = document.createElement('div');
+newDiv.style.width = '150px';
+newDiv.style.height = '150px';
+newDiv.style.background = 'green';
+newDiv.style.color = 'white';
+document.body.append(newDiv)
 
 
